@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            color: #343a40;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Ensure container is above bubbles */
+            max-width: 400px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #007bff; /* Add a border to the profile picture */
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin: 20px 0 10px;
+            font-size: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .social-links a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Bubble Animation */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.5);
+            animation: float 6s infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Create multiple bubbles with different sizes and animations */
+        .bubble:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            left: 10%;
+            animation-duration: 7s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            left: 30%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            left: 60%;
+            animation-duration: 6s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 120px;
+            height: 120px;
+            left: 80%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 90px;
+            height: 90px;
+            left: 50%;
+            animation-duration: 10s;
+            animation-delay: 3s;
+        }
+    </style>
+</head>
+  <body>
+    <div class="container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Singh Anshuman</h1>
+        <p class="bio">Hi! I'm Singh Anshuman, a web developer with a passion for creating beautiful and asthetic websites. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dolor suscipit, minus rerum autem nemo dolorem nihil quam eligendi fugit fuga dignissimos est, accusantium quaerat sit, unde repellat officia? Eaque id corrupti quis incidunt dolorem rem cumque et excepturi ex, delectus quas numquam minus iusto?</p>
+        <h2>Connect with me:</h2>
+        <div class="social-links">
+            <a href="https://x.com/Anshuma96484307" target="_blank">Twitter</a>
+            <a href="https://github.com/anshu-025" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/anshuman-singh-a9a480298" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</body>
